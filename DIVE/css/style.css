@@ -1,0 +1,157 @@
+html{
+  font-size: 62.5%;
+  height: 100%;
+}
+body{
+height: 100%;
+margin: 0;
+padding: 0;
+}
+.container{
+  width: 980px;
+  min-height: 1000px;
+   margin:0 auto;
+}
+top_menu{
+
+}
+ ul.top_menu {
+  float: right;
+  padding: 0;
+  /* margin-top: 14px; */
+  vertical-align: middle;
+}
+li{
+  list-style: none;
+}
+.header{
+  background-color: #F5B4B3;
+  height: 50px;
+  font-size: 1.5rem;
+}
+.lg_img{
+  width: 110px;
+    margin: 0;
+  float: left;
+}
+.top_menu{
+  padding: 0px;
+  margin: 0px;
+}
+
+ .top_menu li{
+  float: right;
+  width: auto;
+
+}
+.top_menu li a {
+  color: white;
+  text-decoration: none;
+  padding:0px 0px 0px 10px;
+}
+.top_menu li a:hover{
+  text-decoration: underline;
+}
+ .clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.top_img{
+  width: 100%;
+}
+.side_menu, .form{
+display : inline-block;
+}
+.side_menu{
+  width: 300px;
+   float: left;
+}
+.side_menu ul{
+  padding: 0px;
+}
+.side_menu li{
+  background-color: #F5B4B3;
+  height: 6rem;
+  margin-bottom: 10px;
+  padding: 2rem;
+}
+.side_menu li:hover{
+  opacity: 0.5;
+}
+.side_menu li a{
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.form{
+  float:right;
+  width: 660px;
+  font-size: 1.5rem;
+  margin-top: 11px;
+
+}
+.profil{
+  float: right;
+  width: 660px;
+  font-size: 1.5rem;
+  margin-top: 11px;
+}
+.profil table{
+  border-collapse:collapse;
+}
+.profil th{
+  /* border: 1px solid black; */
+  height: 4rem;
+  width: 100px;
+  text-align: center;
+  background-color:  gray;
+
+}
+.profil td{
+  border: 1px solid black;
+  height: 4rem;
+  width: 400px;
+  text-align: left;
+}
+.menu{
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+.input{
+  height: 4rem;
+  width: 480px;
+  border: 1px solid black;
+}
+.form tr{
+  height: 7rem;
+}
+form th{
+  text-align: right;
+  padding-right: 10px;
+  width: 150px;
+}
+.btn{
+  background-color: #008B8B;
+  color: white;
+  height: 3rem;
+  padding: 10px;
+  margin:10px 50% 0 50%;
+}
+.btn:hover{
+  opacity: 0.6;
+}
+.footer{
+  background-color: #4D4D4D;
+  height: 100px;
+  position: fixed;
+  bottom: 0px;
+  margin-top: 50px;
+  width: 75%;
+}
+.footer p{
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+}
