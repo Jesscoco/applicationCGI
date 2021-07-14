@@ -86,7 +86,8 @@ $(document).ready(function () {
     let pass_or_failure = get_pass_or_failure(subject_points);
 
     // 「Juge final」(id="alert-indicate)Lorsque le bouton est pressé「Ton niveau${achievement}です。${pass_or_failure}です。」est le processus qui envoie.
-     $('#declaration').append(`<label id="alert-indicate" class="alert alert-info">Votre note est ${achievement}. Vous avez ${pass_or_failure}.</label>`);
+     //$('#declaration').append(`<label id="alert-indicate" class="alert alert-info">Votre note est ${achievement}. Vous avez ${pass_or_failure}.</label>`);
+     $('#declaration').text(`Votre note est ${achievement}. Vous avez ${pass_or_failure}.`);
   };
   // Ce processus déclenche la fonction score_indicate() lorsque l'un des scores [score en japonais, score en anglais, score en mathématiques, score en sciences, score en sciences sociales] est modifié.
   $('#national_language, #english, #mathematics, #science, #society').change(function () {
@@ -103,22 +104,24 @@ $(document).ready(function () {
   // Lorsque le bouton "juge final" (id="btn-declaration") est pressé, le processus de "function judgement()" est exécuté.
   // Lorsque le bouton "Juge final" est cliqué pour la deuxième fois ou plus, l'élément HTML du juge affiché jusqu'alors est supprimé, et un nouvel élément HTML du juge est ajouté.
   // Conseil : examinons la méthode de "remove"
-  $('#btn-declaration').click(function () {
-    $('#declaration').text(judgement());
+ // $('#btn-declaration').click(function () {
+
     $('#btn-declaration').data('count', 0)
+
     .on('click', function(){
 
       let nbr= $(this).data ('count')+1;
        $(this).data ('count',nbr);
-      if (nbr >=1)
+      if (nbr === 1)
          {
-          $('#declaration').remove();
-           location.reload();
+      $('#declaration').text(judgement());
          }
          else
          {
-             $('#declaration').text(judgement());
+    $('#declaration').text(judgement());
+
+           nbr = 0;
          }
+
       });
-    });
 });
