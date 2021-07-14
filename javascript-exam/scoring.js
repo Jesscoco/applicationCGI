@@ -112,7 +112,8 @@ $(document).ready(function () {
        $(this).data ('count',nbr);
       if (nbr >=1)
          {
-           $('#declaration').remove();
+          $('#declaration').remove();
+           location.reload();
          }
          else
          {
