@@ -16,11 +16,7 @@ class Player
          return input_hand.to_i
        else
          puts "Veuillez insérer une lettre comprise entre 0 et 2"
-         puts "Veuillez saisir un nombre."
-         puts "0: Pierre"
-         puts "1: Papier"
-         puts "2: Ciseau"
-         return input_hand=gets.chomp
+       input_hand=gets.chomp
        end
       # ヒント：include?メソッドについて調べてみましょう。
         # 「input_hand」をそのまま返す。
@@ -45,7 +41,7 @@ class Janken
      # Remplacez ["goo", "choki", "par"] la variable "janken".
      janken = ["Pierre","Papier","Ciseau"]
      #「相手の手は#{相手の手}です。」と出力させます。
-     print "Le coup de l'adversaire est #{janken[enemy_hand]}"
+     puts "Le coup de l'adversaire est #{janken[enemy_hand]}"
      if player_hand == enemy_hand
        # "Aiko" est sorti.
        puts "Egalité"
