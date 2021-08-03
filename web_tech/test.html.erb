@@ -7,9 +7,14 @@
     <% require 'pg' %>
     <% connection = PG::connect(dbname: "goya") %>
     <% connection.internal_encoding = "UTF-8" %>
+    <% reslt = connection.exec("select * from crops where quality=false;") %>
+    <% dta = [] %>
+    <% reslt.each do |rcd| %>
+      <%  dta << "bitter gourd：#{rcd["weight"]}　Who sold：#{rcd["give_for"]} With quality：#{rcd["quality"]}" %>
+    <% end %>
     <form action="indicate.cgi" method="POST">
        Please enter the characters below<br><br>
-      <input type="text"  name="input" ><br>
+      <input type="text" name="input" value="<%= dta.join(' ') %> ">
       <input type="submit" name="Send" >
     </form>
     <% result = connection.exec("select weight, give_for from crops;") %>
